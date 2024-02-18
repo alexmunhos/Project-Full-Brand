@@ -6,9 +6,9 @@
         <PageFour/>
         <PageFive/>
         <PageSix/>
-        <!-- <PageSeven/>
+        <PageSeven/>
         <PageEight/>
-        <PageNine/>
+        <!-- <PageNine/>
         <PageTen/> -->
     </div>
 </template>
@@ -20,14 +20,15 @@ import PageThree from './PageThree.vue';
 import PageFour from './PageFour.vue';
 import PageFive from './PageFive.vue';
 import PageSix from './PageSix.vue';
-// import PageSeven from './PageSeven.vue';
-// import PageEight from './PageEight.vue';
+import PageSeven from './PageSeven.vue';
+import PageEight from './PageEight.vue';
 // import PageNine from './PageNine.vue';
 // import PageTen from './PageTen.vue';
 export default {
     components: {
-        PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix, 
-        // PageSeven, PageEight, PageNine, PageTen
+        PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix, PageSeven, 
+        PageEight
+        // , PageNine, PageTen
     }
 }
 </script>

@@ -34,15 +34,33 @@
 <style scoped>
 
 .background{
-    background-color: #131313;
-    height: 500px;
+    background-color: black;
+    height: 800px;
 }
 
 .container{
     width: 1300px;
-    height: 500px;
+    height: 800px;
     margin: 0 auto;
+}
+
+.img{
+    text-align: center;
+    width: 40%;
+}
+
+.text{
+    width: 60%;
+}
+
+.img-center{
+    width: 190px;
+}
+
+.block{
     display: flex;
+    width: 1000px;
+    margin: 50px auto auto auto;
 }
 
 </style>

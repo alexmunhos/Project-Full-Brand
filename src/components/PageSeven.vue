@@ -20,15 +20,46 @@
 <style scoped>
 
 .background{
-    background-color: #131313;
-    height: 500px;
+    background-color: black;
+    height: 730px;
 }
 
 .container{
     width: 1300px;
-    height: 500px;
+    height: 730px;
     margin: 0 auto;
-    display: flex;
+}
+
+.title{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.line-style{
+    width: 100px;
+    height: 3px;
+    margin: 30px auto auto auto;
+    background-color: red;
+}
+
+.img{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-center{
+    width: 1050px;
+}
+
+.button{
+    padding: 20px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    background-color: #159711;
+    border-radius: 10px;
 }
 
 </style>
