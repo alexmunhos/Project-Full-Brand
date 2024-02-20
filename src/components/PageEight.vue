@@ -39,7 +39,7 @@
 }
 
 .container{
-    width: 1300px;
+    width: 1200px;
     height: 800px;
     margin: 0 auto;
 }
@@ -61,6 +61,16 @@
     display: flex;
     width: 1000px;
     margin: 50px auto auto auto;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+
+    .block{
+        width: 100%;
+    }
 }
 
 </style>

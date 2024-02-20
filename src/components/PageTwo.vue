@@ -69,7 +69,7 @@
 }
 
 .container{
-    width: 1300px;
+    width: 1200px;
     height: 850px;
     margin: 0 auto;
     display: flex;
@@ -182,6 +182,14 @@
     position: relative;
     top: 45px;
     left: 25px;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    .container{
+        width: 100%;
+    }
+
 }
 
 </style>

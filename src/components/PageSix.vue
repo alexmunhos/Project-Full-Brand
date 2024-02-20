@@ -41,7 +41,7 @@
 }
 
 .container{
-    width: 1000px;
+    width: 1200px;
     height: 400px;
     margin: 0 auto;
     display: flex;
@@ -83,5 +83,19 @@
 .img{
     position: relative;
 }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+
+    .img-center{
+        width: 100px;
+    }
+    .images{
+        left: 0px;
+    }
+}
+
 
 </style>

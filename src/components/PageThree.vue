@@ -67,7 +67,7 @@
 }
 
 .container{
-    width: 1300px;
+    width: 1200px;
     height: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -106,7 +106,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 1300px;
+    width: 1200px;
     margin: 50px auto 0 auto;
 }
 
@@ -140,6 +140,17 @@
 .content{
     margin: 15px 10px 0px 20px;
     font-size: 17px;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    .container{
+    width: 100%;
+}
+
+.container-infos{
+    width: 100%;
+}
 }
 
 </style>

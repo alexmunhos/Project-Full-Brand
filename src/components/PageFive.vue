@@ -48,7 +48,7 @@
 }
 
 .container{
-    width: 1300px;
+    width: 1200px;
     height: 1200px;
     margin: 0 auto;
 }
@@ -120,6 +120,32 @@
     position: relative;
     left: 30px;
     top: 30px;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .background{
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .block-two{
+        width: 100%;
+    }
+
+    .block-one{
+        width: 100%;
+    }
+
+    .img-center-one{
+        left: 0px;
+    }
+
+    .img-center-two{
+        left: 0px;
+    }
 }
 
 </style>

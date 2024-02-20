@@ -25,7 +25,7 @@
 }
 
 .container{
-    width: 1300px;
+    width: 1200px;
     height: 730px;
     margin: 0 auto;
 }
@@ -60,6 +60,16 @@
     margin: 30px auto 0 auto;
     background-color: #159711;
     border-radius: 10px;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+
+    .img-center{
+        width: 100%;
+    }
 }
 
 </style>
