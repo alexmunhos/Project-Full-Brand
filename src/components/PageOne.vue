@@ -7,7 +7,20 @@
 
         <div class="container" :style="{'height': screenWidth}">
             <div class="sub-container" :style="{'height': screenWidth}">
-                <img src="@/assets/imagem-bg1.png" id="image" class="img-vitor" alt="Minha Imagem">
+                <div class="first-block"> 
+                    <div class="question"> 
+                        Procurando uma empresa de marketing?
+                    </div>
+                    <div class="title"> 
+                        Tenha um time feito 
+                        <span style="color: red;">sob medida</span>
+                        para atender seu negócio
+                    </div>
+                    <div class="button"> 
+                        QUERO MAIS INFORMAÇÕES
+                    </div>
+                </div>
+                <img src="@/assets/bg-home.png" id="image" class="img-vitor" alt="Minha Imagem">
             </div>
         </div>
     </div>
@@ -46,6 +59,7 @@ export default {
 .sub-container {
     width: 1200px;
     margin: 0 auto;
+    display: flex;
 }
 
 .img-full-brand-logo {
@@ -54,13 +68,38 @@ export default {
     bottom: 5px;
 }
 
+.first-block{
+    width: 35%;
+    color: black;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.button {
+	padding: 13px 20px 20px 20px;
+	width: 250px;
+	height: 12px;
+	text-align: center;
+	margin: 15px auto 0 0;
+	background-color: #159711;
+	border-radius: 10px;
+    color: white;
+    font-size: 15px;
+}
+
 .img-vitor {
-    width: 1200px;
+    width: 65%;
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-    .img-vitor {
-        width: 100%;
+
+    .button{
+        width: 180px;
     }
 
     .sub-container {

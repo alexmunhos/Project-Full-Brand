@@ -28,8 +28,7 @@ import PageTen from './PageTen.vue';
 import PageFooter from './PageFooter.vue';
 export default {
     components: {
-        PageOne, 
-        PageTwo, PageThree, PageFour, PageFive, PageSix, PageSeven, 
+        PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix, PageSeven, 
         PageEight, PageNine, PageTen, PageFooter
     }
 }

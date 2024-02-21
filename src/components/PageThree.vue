@@ -145,12 +145,25 @@
 @media (min-width: 800px) and (max-width: 1200px) {
 
     .container{
-    width: 100%;
-}
+        width: 100%;
+    }
 
-.container-infos{
-    width: 100%;
-}
+    .container-infos{
+        width: 100%;
+    }
+
+    .img-center{
+        width: 80%;
+    }
+
+    .container-infos{
+        width: 95%;
+    }
+
+    .info{
+        width: 300px;
+        margin: 0px 10px;
+    }
 }
 
 </style>

@@ -68,7 +68,7 @@
     }
 
     .img-center{
-        width: 100%;
+        width: 80%;
     }
 }
 
