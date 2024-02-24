@@ -66,6 +66,7 @@
 .background{
     background-color: #131313;
     height: 850px;
+    width: 1200px;
 }
 
 .container{
@@ -184,12 +185,10 @@
     left: 25px;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
     }
-
 }
 
 </style>

@@ -22,6 +22,7 @@
 .background{
     background-color: black;
     height: 730px;
+    width: 1200px;
 }
 
 .container{
@@ -62,14 +63,9 @@
     border-radius: 10px;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
     }
-
-    .img-center{
-        width: 80%;
-    }
 }
-
 </style>

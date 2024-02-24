@@ -16,16 +16,16 @@
                 <div class="img" style="z-index: 5;"> 
                     <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab0275c316981604565.webp" alt="Meu SVG">
                 </div>
-                <div class="img" style="right: 30px; z-index: 4;"> 
+                <div class="img" style="left: 135px; z-index: 4;"> 
                     <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab0274ef22962310397.webp" alt="Meu SVG">
                 </div>
-                <div class="img" style="right: 60px; z-index: 3;"> 
+                <div class="img" style="left: 270px; z-index: 3;"> 
                     <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab0274b643064082743.webp" alt="Meu SVG">
                 </div>
-                <div class="img" style="right: 90px; z-index: 2;"> 
+                <div class="img" style="left: 405px; z-index: 2;"> 
                     <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab0274b8c1984445522.webp" alt="Meu SVG">
                 </div>
-                <div class="img" style="right: 120px; z-index: 1;"> 
+                <div class="img" style="left: 540px; z-index: 1;"> 
                     <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab0274f4fd727448203.webp" alt="Meu SVG">
                 </div>
             </div>
@@ -38,17 +38,18 @@
 .background{
     background-color: #131313;
     height: 400px;
+    width: 1200px;
 }
 
 .container{
-    width: 1200px;
+    width: 1000px;
     height: 400px;
     margin: 0 auto;
     display: flex;
 }
 
 .block-one{
-    width: 250px;
+    width: 270px;
     margin-top: 70px;
 }
 
@@ -74,26 +75,19 @@
 }
 
 .images{
-    position: relative;
-    left: 100px;
     margin-top: 100px;
+    position: relative;
+    left: 40px;
     display: flex;
 }
 
 .img{
-    position: relative;
+    position: absolute;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
-    }
-
-    .img-center{
-        width: 100px;
-    }
-    .images{
-        left: 0px;
     }
 }
 

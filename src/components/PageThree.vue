@@ -64,6 +64,7 @@
 .background{
     background-color: black;
     height: 1100px;
+    width: 1200px;
 }
 
 .container{
@@ -142,27 +143,9 @@
     font-size: 17px;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
-    }
-
-    .container-infos{
-        width: 100%;
-    }
-
-    .img-center{
-        width: 80%;
-    }
-
-    .container-infos{
-        width: 95%;
-    }
-
-    .info{
-        width: 300px;
-        margin: 0px 10px;
     }
 }
 

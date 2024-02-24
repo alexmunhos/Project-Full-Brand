@@ -28,8 +28,17 @@ import PageTen from './PageTen.vue';
 import PageFooter from './PageFooter.vue';
 export default {
     components: {
-        PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix, PageSeven, 
-        PageEight, PageNine, PageTen, PageFooter
+        PageOne, 
+        PageTwo, 
+        PageThree, 
+        PageFour, 
+        PageFive, 
+        PageSix, 
+        PageSeven, 
+        PageEight, 
+        PageNine, 
+        PageTen, 
+        PageFooter
     }
 }
 </script>
@@ -42,6 +51,25 @@ html, body {
     background: #000000;
     color: white;
     font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (max-width: 800px) {
+.app {
+    zoom: 66.7%;
+}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+.app {
+    zoom: calc(0.3333 * (100vw - 400px) + 66.7%);
+}
+}
+
+@media only screen and (min-width: 1201px) {
+.app {
+    zoom: 100%;
+}
 }
 
 </style>

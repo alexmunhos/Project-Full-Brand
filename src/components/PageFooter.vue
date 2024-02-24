@@ -21,6 +21,7 @@
 .background{
     background-color: white;
     height: 200px;
+    width: 1200px;
 }
 
 .container{
@@ -59,8 +60,8 @@
     margin: 30px 0px 0px 100px;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
     }
 }

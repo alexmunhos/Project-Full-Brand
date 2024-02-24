@@ -77,19 +77,20 @@ export default {
 
 .background{
     background-color: black;
-    height: 900px;
+    height: 1000px;
+    width: 1200px;
 }
 
 .container{
     width: 1200px;
-    height: 900px;
+    height: 1000px;
     margin: 0 auto;
 }
 
 .title{
     font-size: 30px;
     width: 700px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     text-align: center;
 }
 
@@ -189,21 +190,9 @@ export default {
 	}
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
     }
-
-    .slideshow{
-		width: 80%;
-	}
-
-    .next {
-		right: 0px !important;
-	}
-
-	.prev {
-		left: 0px;
-	}
 }
 </style>

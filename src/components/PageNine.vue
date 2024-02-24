@@ -72,6 +72,7 @@ export default {
 .background{
     background-color: black;
     height: 900px;
+    width: 1200px;
 }
 
 .container{
@@ -106,7 +107,7 @@ export default {
     width: 200px;
     height: 20px;
     text-align: center;
-    margin: 70px auto 0 auto;
+    margin: 50px auto 0 auto;
     background-color: #159711;
     border-radius: 10px;
 }
@@ -115,7 +116,7 @@ export default {
 .slideshow {
 	width: 850px;
 	position: relative;
-	margin: 30px auto auto auto;
+	margin: 50px auto auto auto;
 }
 
 /* Next & previous buttons */
@@ -183,22 +184,10 @@ export default {
 	}
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    .container{
+@media (min-width: 1200px) {
+    .background{
         width: 100%;
     }
-
-    .slideshow{
-		width: 80%;
-	}
-
-    .next {
-		right: 0px !important;
-	}
-
-	.prev {
-		left: 0px;
-	}
 }
 
 </style>

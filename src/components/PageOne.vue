@@ -50,10 +50,12 @@ export default {
     background-color: #C60000;
     height: 60px;
     text-align: center;
+    width: 1200px;
 }
 
 .container {
     background-color: #FCFAFA;
+    width: 1200px;
 }
 
 .sub-container {
@@ -96,13 +98,12 @@ export default {
     width: 65%;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-
-    .button{
-        width: 180px;
+@media (min-width: 1200px) {
+    .navbar{
+        width: 100%;
     }
 
-    .sub-container {
+    .container{
         width: 100%;
     }
 }

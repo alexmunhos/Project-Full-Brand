@@ -44,7 +44,8 @@
 
 .background{
     background-color: black;
-    height: 1200px;
+    height: 1150px;
+    width: 1200px;
 }
 
 .container{
@@ -55,7 +56,7 @@
 
 .button{
     padding: 20px;
-    width: 350px;
+    width: 200px;
     height: 20px;
     text-align: center;
     margin: 70px auto 0 auto;
@@ -65,7 +66,7 @@
 
 .block-one{
     width: 1000px;
-    margin: 100px auto 0 auto;
+    margin: 80px auto 0 auto;
     background: linear-gradient(#0D0D0D, black) padding-box,
               linear-gradient(to bottom, #6C6C6C, black) border-box;
     border-radius: 40px;
@@ -122,29 +123,9 @@
     top: 30px;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
     .background{
         width: 100%;
-    }
-
-    .container{
-        width: 100%;
-    }
-
-    .block-two{
-        width: 100%;
-    }
-
-    .block-one{
-        width: 100%;
-    }
-
-    .img-center-one{
-        left: 0px;
-    }
-
-    .img-center-two{
-        left: 0px;
     }
 }
 
