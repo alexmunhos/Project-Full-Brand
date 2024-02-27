@@ -15,8 +15,12 @@
                 Método V4
             </div>
 
-            <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab02775bc4395562108.svg" alt="Meu SVG">
-        
+            <picture>
+                <source media="(max-width: 800px)" srcset="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf49928478713293510_d.svg">
+                <source media="(min-width: 801px)" srcset="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab02775bc4395562108.svg">
+                <img class="img-center" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab02775bc4395562108.svg" alt="Meu SVG">
+            </picture>
+
             <div class="container-infos">
                 <div class="info"> 
                     <div class="title-red"> 
@@ -146,6 +150,47 @@
 @media (min-width: 1200px) {
     .background{
         width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+
+    .background{
+        background-color: #131313;
+        height: 1400px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1400px;
+        display: block;
+    }
+
+    .img-center{
+        width: 90%;
+    }
+
+    .title-first{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .container-infos{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .info{
+        width: 45%;
+        border-radius: 15px;
+        height: 150px;
+        background-color: #2a2a2a;
+        border: solid 1px #464646;
+        margin: 1.75%;
+        text-align: left;
     }
 }
 

@@ -1,44 +1,44 @@
 <template>
     <div class="app">
-        <PageOne/>
+        <!-- <PageOne/> -->
         <PageTwo/>
         <PageThree/>
         <PageFour/>
         <PageFive/>
-        <PageSix/>
+        <!-- <PageSix/>
         <PageSeven/>
         <PageEight/>
         <PageNine/>
         <PageTen/>
-        <PageFooter/>
+        <PageFooter/> -->
     </div>
 </template>
 
 <script>
-import PageOne from './PageOne.vue';
+// import PageOne from './PageOne.vue';
 import PageTwo from './PageTwo.vue';
 import PageThree from './PageThree.vue';
 import PageFour from './PageFour.vue';
 import PageFive from './PageFive.vue';
-import PageSix from './PageSix.vue';
-import PageSeven from './PageSeven.vue';
-import PageEight from './PageEight.vue';
-import PageNine from './PageNine.vue';
-import PageTen from './PageTen.vue';
-import PageFooter from './PageFooter.vue';
+// import PageSix from './PageSix.vue';
+// import PageSeven from './PageSeven.vue';
+// import PageEight from './PageEight.vue';
+// import PageNine from './PageNine.vue';
+// import PageTen from './PageTen.vue';
+// import PageFooter from './PageFooter.vue';
 export default {
     components: {
-        PageOne, 
+        // PageOne, 
         PageTwo, 
         PageThree, 
         PageFour, 
         PageFive, 
-        PageSix, 
-        PageSeven, 
-        PageEight, 
-        PageNine, 
-        PageTen, 
-        PageFooter
+        // PageSix, 
+        // PageSeven, 
+        // PageEight, 
+        // PageNine, 
+        // PageTen, 
+        // PageFooter
     }
 }
 </script>
@@ -54,19 +54,19 @@ html, body {
 }
 
 
-@media only screen and (max-width: 800px) {
-.app {
-    zoom: 66.7%;
-}
+@media (max-width: 800px) {
+    .app {
+        zoom: 100%;
+    }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 1200px) {
 .app {
     zoom: calc(0.3333 * (100vw - 400px) + 66.7%);
 }
 }
 
-@media only screen and (min-width: 1201px) {
+@media (min-width: 1201px) {
 .app {
     zoom: 100%;
 }

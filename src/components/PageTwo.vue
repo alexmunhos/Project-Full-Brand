@@ -191,4 +191,47 @@
     }
 }
 
+@media(max-width: 800px){
+    .background{
+        background-color: #131313;
+        height: 1500px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1500px;
+        display: block;
+    }
+
+    .title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info{
+        width: 95%;
+        height: 250px;
+    }
+
+    .container-second{
+        width: 100%;
+    }
+
+    .first{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .second{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .line-style{
+        margin: 20px auto 0 auto;
+    }
+}
+
 </style>

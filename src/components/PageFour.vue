@@ -14,9 +14,17 @@
 			</div>
 
 			<div class="slideshow">
-				<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
-					v-show="index === currentSlideIndex">
-					<img :src="slide.image" style="width:100%">
+				<div v-if="isScreenSmall()">
+					<div class="mySlides fade" v-for="(slide, index) in slidesResponsive" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
+				</div>
+				<div v-else>
+					<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
 				</div>
 				
 				<a class="prev" @click="changeSlide(-1)">❮</a>
@@ -43,6 +51,15 @@ export default {
 				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab0273e9f84387768313945507.webp" },
 				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab0273e9f84387768319258897.webp" },
 			],
+			slidesResponsive: [
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m598918.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m7796623.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m45486.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m3340572.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m3892733.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m3545163.webp"},
+				{image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b018a413882436_m5335360.webp"}
+			],
 			currentSlideIndex: 0,
 			intervalId: null // Adicionando uma variável para armazenar o ID do intervalo
 		};
@@ -65,7 +82,10 @@ export default {
 			this.intervalId = setInterval(() => {
 				this.changeSlide(1);
 			}, 4000);
-		}
+		},
+		isScreenSmall() {
+            return window.innerWidth < 801;
+        }
 	},
 	mounted() {
 		this.startInterval(); // Inicia o intervalo quando o componente é montado
@@ -194,5 +214,39 @@ export default {
     .background{
         width: 100%;
     }
+}
+
+@media (max-width: 800px) {
+    .background{
+        background-color: #131313;
+        height: 1100px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1100px;
+        display: block;
+    }
+
+	.title {
+		font-size: 28px;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 10px;
+	}
+
+	.text-center {
+		margin-top: 30px;
+		width: 90%;
+		margin: 30px auto 0 auto;
+		font-size: 15px;
+	}
+
+	.slideshow {
+		width: 90%;
+		position: relative;
+		margin: 50px auto auto auto;
+	}
 }
 </style>
