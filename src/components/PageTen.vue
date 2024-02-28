@@ -13,10 +13,18 @@
                 Todos eles formam o conselho consultivo que nos mantém evoluindo constantemente
             </div>
 
-            <div class="slideshow">
-				<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
-					v-show="index === currentSlideIndex">
-					<img :src="slide.image" style="width:100%">
+			<div class="slideshow">
+				<div v-if="isScreenSmall()">
+					<div class="mySlides fade" v-for="(slide, index) in slidesResponsive" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
+				</div>
+				<div v-else>
+					<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
 				</div>
 				
 				<a class="prev" @click="changeSlide(-1)">❮</a>
@@ -43,6 +51,15 @@ export default {
                 { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab02777a556480177581942863.webp"},
                 { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab02777a556480177588009584.webp"},
 			],
+			slidesResponsive: [
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m541741.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m8324083.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m863159.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m8957286.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m9492042.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m4551994.webp"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498af9a8743251019_m7488566.webp"},
+			],
 			currentSlideIndex: 0,
 			intervalId: null // Adicionando uma variável para armazenar o ID do intervalo
 		};
@@ -65,7 +82,10 @@ export default {
 			this.intervalId = setInterval(() => {
 				this.changeSlide(1);
 			}, 4000);
-		}
+		},
+		isScreenSmall() {
+            return window.innerWidth < 801;
+        }
 	},
 	mounted() {
 		this.startInterval(); // Inicia o intervalo quando o componente é montado
@@ -195,4 +215,36 @@ export default {
         width: 100%;
     }
 }
+
+
+@media (max-width: 800px) {
+    .background{
+        background-color: black;
+        height: 1300px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1300px;
+        display: block;
+    }
+
+	.slideshow {
+		width: 90%;
+		position: relative;
+		margin: 50px auto auto auto;
+	}
+
+	.title{
+		padding-top: 50px;
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	.text{
+		width: 100%;
+	}
+}
+
 </style>

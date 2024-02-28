@@ -12,9 +12,17 @@
             </div>
 
 			<div class="slideshow">
-				<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
-					v-show="index === currentSlideIndex">
-					<img :src="slide.image" style="width:100%">
+				<div v-if="isScreenSmall()">
+					<div class="mySlides fade" v-for="(slide, index) in slidesResponsive" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
+				</div>
+				<div v-else>
+					<div class="mySlides fade" v-for="(slide, index) in slides" :key="index"
+						v-show="index === currentSlideIndex">
+						<img :src="slide.image" style="width:100%">
+					</div>
 				</div>
 				
 				<a class="prev" @click="changeSlide(-1)">❮</a>
@@ -36,6 +44,11 @@ export default {
                 { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc2916956322589035.svg"},
                 { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc291695632520290.svg"},
                 { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc2916956324479141.svg"},
+			],
+			slidesResponsive: [
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431931225356.svg"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431934699311.svg"},
+				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431938639755.svg"},
 			],
 			currentSlideIndex: 0,
 			intervalId: null // Adicionando uma variável para armazenar o ID do intervalo
@@ -59,7 +72,10 @@ export default {
 			this.intervalId = setInterval(() => {
 				this.changeSlide(1);
 			}, 4000);
-		}
+		},
+		isScreenSmall() {
+            return window.innerWidth < 801;
+        }
 	},
 	mounted() {
 		this.startInterval(); // Inicia o intervalo quando o componente é montado
@@ -188,6 +204,35 @@ export default {
     .background{
         width: 100%;
     }
+}
+
+@media (max-width: 800px) {
+    .background{
+        background-color: black;
+        height: 950px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 950px;
+        display: block;
+    }
+
+	.slideshow {
+		width: 90%;
+		position: relative;
+		margin: 50px auto auto auto;
+	}
+
+	.title{
+		padding-top: 50px;
+		width: 100%;
+	}
+
+	.text{
+		width: 100%;
+	}
 }
 
 </style>

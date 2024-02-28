@@ -66,4 +66,36 @@
     }
 }
 
+@media (max-width: 800px) {
+
+    .background{
+        background-color: white;
+        height: 200px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 200px;
+    }
+
+    .first-block{
+        height: 90px;
+        margin: 0px;
+    }
+
+    .img{
+        width: 120px;
+        margin: 30px 0px 0px 0px;
+    }
+
+    .return{
+        color: red;
+        width: 50%;
+        margin-top: 35px;
+        text-align: end;
+        font-size: 17px;
+    }
+}
+
 </style>

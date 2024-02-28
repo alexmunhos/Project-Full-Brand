@@ -17,7 +17,7 @@
             </div>
             
             <div class="block-two"> 
-                <div>
+                <div v-if="!isScreenSmall()">
                     <img class="img-center-two" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/desktop/350566_1_1698344999653ab02754a0f937458483.svg" alt="Meu SVG">
                 </div>
                 <div class="content-two"> 
@@ -31,6 +31,9 @@
                         Todos esses serviços são divididos em planos. Você pode ajustar conforme sua disponibilidade de investimento. O importante é não desistir de investir no que vai transformar a realidade do seu negócio.
                     </div>
                 </div>
+                <div v-if="isScreenSmall()">
+                    <img class="img-center-two" src="https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498a8a33017439596.svg" alt="Meu SVG">
+                </div>
             </div>
 
             <div class="button"> 
@@ -39,6 +42,16 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    isScreenSmall() {
+        return window.innerWidth < 801;
+    }
+  }
+};
+</script>
 
 <style scoped>
 
@@ -126,6 +139,67 @@
 @media (min-width: 1200px) {
     .background{
         width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .background{
+        background-color: black;
+        height: 1600px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1600px;
+        display: block;
+    }
+
+    .block-one{
+        width: 100%;
+        display: block;
+        height: 700px;
+    }
+
+    .block-two{
+        width: 100%;
+        margin-top: 20px;
+        display: block;
+        height: 700px;
+    }
+
+    .content-one{
+        margin: 40px;
+        text-align: center;
+    }
+
+    .content-two{
+        text-align: center;
+        margin: 40px;
+    }
+
+    .line-style{
+        margin: 30px auto 0 auto;
+    }
+
+    .img-center-one{
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 50px;
+        left: 0px;
+    }
+
+    .img-center-two{
+        width: 85%;
+        height: auto;
+        position: relative;
+        left: 7.5%;
+        top: 0;
+    }
+
+    .button{
+        margin: 50px auto 0 auto;
     }
 }
 

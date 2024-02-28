@@ -5,12 +5,12 @@
         <PageThree/>
         <PageFour/>
         <PageFive/>
-        <!-- <PageSix/>
+        <PageSix/>
         <PageSeven/>
         <PageEight/>
         <PageNine/>
         <PageTen/>
-        <PageFooter/> -->
+        <PageFooter/>
     </div>
 </template>
 
@@ -20,12 +20,12 @@ import PageTwo from './PageTwo.vue';
 import PageThree from './PageThree.vue';
 import PageFour from './PageFour.vue';
 import PageFive from './PageFive.vue';
-// import PageSix from './PageSix.vue';
-// import PageSeven from './PageSeven.vue';
-// import PageEight from './PageEight.vue';
-// import PageNine from './PageNine.vue';
-// import PageTen from './PageTen.vue';
-// import PageFooter from './PageFooter.vue';
+import PageSix from './PageSix.vue';
+import PageSeven from './PageSeven.vue';
+import PageEight from './PageEight.vue';
+import PageNine from './PageNine.vue';
+import PageTen from './PageTen.vue';
+import PageFooter from './PageFooter.vue';
 export default {
     components: {
         // PageOne, 
@@ -33,12 +33,12 @@ export default {
         PageThree, 
         PageFour, 
         PageFive, 
-        // PageSix, 
-        // PageSeven, 
-        // PageEight, 
-        // PageNine, 
-        // PageTen, 
-        // PageFooter
+        PageSix, 
+        PageSeven, 
+        PageEight, 
+        PageNine, 
+        PageTen, 
+        PageFooter
     }
 }
 </script>

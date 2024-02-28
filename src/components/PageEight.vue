@@ -83,4 +83,41 @@
     }
 }
 
+@media (max-width: 800px) {
+
+    .background{
+        background-color: black;
+        height: 1200px;
+        width: 100vw;
+    }
+
+    .container{
+        width: 360px;
+        height: 1200px;
+        display: block;
+    }
+
+
+    .block{
+        display: block;
+        width: 100%;
+        margin: 50px auto auto auto;
+    }
+
+    .img{
+        text-align: center;
+    }
+
+    .img-center{
+        width: 40%;
+    }
+
+    .text{
+        margin: auto;
+        padding: 20px 0 0 0;
+        text-align: center;
+        width: 300px;
+    }
+}
+
 </style>

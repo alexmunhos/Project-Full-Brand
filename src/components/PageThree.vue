@@ -156,7 +156,7 @@
 @media (max-width: 800px){
 
     .background{
-        background-color: #131313;
+        background-color: black;
         height: 1400px;
         width: 100vw;
     }
