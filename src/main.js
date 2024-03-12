@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import PrimeVue from 'primevue/config';
 import HomePage from './components/HomePage.vue'
 
-createApp(HomePage).mount('#app')
+import 'primevue/resources/themes/aura-light-green/theme.css'
+
+const app = createApp(HomePage);
+
+app.use(PrimeVue);
+
+app.mount('#app');
+
+
