@@ -1,8 +1,7 @@
 <template>
     <div class="app">
-        <TesteVue/>
-        <!-- <PageOne/> -->
-        <!-- <PageTwo/>
+        <PageOne/>
+        <PageTwo/>
         <PageThree/>
         <PageFour/>
         <PageFive/>
@@ -11,37 +10,35 @@
         <PageEight/>
         <PageNine/>
         <PageTen/>
-        <PageFooter/> -->
+        <PageFooter/>
     </div>
 </template>
 
 <script>
-import TesteVue from './TesteVue.vue';
-// import PageOne from './PageOne.vue';
-// import PageTwo from './PageTwo.vue';
-// import PageThree from './PageThree.vue';
-// import PageFour from './PageFour.vue';
-// import PageFive from './PageFive.vue';
-// import PageSix from './PageSix.vue';
-// import PageSeven from './PageSeven.vue';
-// import PageEight from './PageEight.vue';
-// import PageNine from './PageNine.vue';
-// import PageTen from './PageTen.vue';
-// import PageFooter from './PageFooter.vue';
+import PageOne from './PageOne.vue';
+import PageTwo from './PageTwo.vue';
+import PageThree from './PageThree.vue';
+import PageFour from './PageFour.vue';
+import PageFive from './PageFive.vue';
+import PageSix from './PageSix.vue';
+import PageSeven from './PageSeven.vue';
+import PageEight from './PageEight.vue';
+import PageNine from './PageNine.vue';
+import PageTen from './PageTen.vue';
+import PageFooter from './PageFooter.vue';
 export default {
     components: {
-        TesteVue
-        // PageOne, 
-        // PageTwo, 
-        // PageThree, 
-        // PageFour, 
-        // PageFive, 
-        // PageSix, 
-        // PageSeven, 
-        // PageEight, 
-        // PageNine, 
-        // PageTen, 
-        // PageFooter
+        PageOne, 
+        PageTwo, 
+        PageThree, 
+        PageFour, 
+        PageFive, 
+        PageSix, 
+        PageSeven, 
+        PageEight, 
+        PageNine, 
+        PageTen, 
+        PageFooter
     }
 }
 </script>

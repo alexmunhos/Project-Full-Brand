@@ -25,6 +25,29 @@
                         <span class="number-1">1</span>
                     </div>
                 </div>
+
+                <div class="info" style="display: block;">
+                    <div style="display: flex;">
+                        <div class="img-first">
+                            <img src="@/assets/icon-planilha.png" class="icon" alt="Minha Imagem">
+                        </div>
+    
+                        <div class="img-last">
+                            <span class="number-1">1</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center-1">
+                        <div class="title-text-first">
+                            Preencha o formulário
+                        </div>
+
+                        <div class="title-text-second">
+                            Envie suas informações de cntato. Todos os seus dados estarão seguros, vamos cuidar bem deles.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="info">
                     <div class="img-first">
                         <span class="number-2">2</span>
@@ -48,18 +71,121 @@
 
             <div class="second">
                 <div class="container-second">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="text" placeholder="Nome" class="input-style">
-                    <input type="submit" value="Receber mais informações" class="input-style-submit">
+                    <InputText class="input-style" v-model="name" placeholder="Qual seu nome?"/>
+                    <InputText class="input-style" v-model="email" placeholder="E-mail corporativo"/>
+                    <InputNumber class="input-style" v-model="fone" placeholder="Seu Telefone"/>
+                    <InputText class="input-style" v-model="nameCompany" placeholder="Qual o nome da sua empresa?"/>
+                    <Dropdown class="input-style-dropdown" :showClear="true"  v-model="monthlyBilling" placeholder="Qual o faturamento mensal da sua empresa?" :filter="true" optionLabel="name" :options="optionsMonthlyBilling"/>
+                    <Dropdown class="input-style-dropdown" :showClear="true" v-model="occupationArea" placeholder="Qual o seu segmento?" :filter="true" optionLabel="name" :options="optionsOccupationArea"/>
+                    <Toast ref="toast" />
+                    <Button class="input-style-submit" label="Receber mais Informações" @click="clickButton" />
                 </div>
             </div>
         </div>
+
+        <Dialog v-model:visible="dialogSuccess" modal header="Dados Recebidos" :style="{ width: '25rem' }">
+            <div class="flex align-items-center gap-3 mb-3">
+                Suas informações foram enviadas com sucesso, aguarde pois em breve entraremos em contato!
+            </div>
+        </Dialog>
+
+        <Dialog v-model:visible="dialogError" modal header="Erro" :style="{ width: '25rem' }">
+            <div class="flex align-items-center gap-3 mb-3">
+                Houve um erro no envio dos seus dados, peço que aguarde alguns minutos até resolvermos!
+            </div>
+        </Dialog>
     </div>
 </template>
+
+<script>
+    import { collection, addDoc } from "firebase/firestore";
+    import InputText from 'primevue/inputtext';
+    import Button from 'primevue/button';
+    import InputNumber from 'primevue/inputnumber';
+    import Dropdown from 'primevue/dropdown';
+    import { db } from './firebase';
+    import Toast from 'primevue/toast';
+    import Dialog from 'primevue/dialog';
+
+    export default {
+        data() {
+            return {
+                dialogSuccess: false,
+                dialogError: false,
+                occupationArea: null,
+                monthlyBilling: null,
+                nameCompany: null,
+                fone: null,
+                email: null,
+                name: null,
+                optionsMonthlyBilling: [
+                    { name: "Até 20 mil" },
+                    { name: "De 21 mil à 50 mil" },
+                    { name: "De 51 mil à 70 mil" },
+                    { name: "De 71 mil à 100 mil" },
+                    { name: "De 101 mil à 400 mil" },
+                    { name: "De 401 mil à 1 milhão" },
+                    { name: "De 1 à 4 milhões" },
+                    { name: "De 4 à 16 milhões" },
+                    { name: "De 16 à 64 milhões" },
+                    { name: "Mais de 64 milhões" }
+                ],
+                optionsOccupationArea: [
+                    { name: "Serviço" },
+                    { name: "Varejo" },
+                    { name: "Indústria" },
+                    { name: "E-commerce" },
+                    { name: "Food Service" },
+                    { name: "Educação" },
+                    { name: "Imobiliária" },
+                    { name: "SAAS" },
+                    { name: "Finanças" },
+                    { name: "Franquia" },
+                    { name: "Telecom" },
+                    { name: "Energia Solar" },
+                    { name: "Turismo" },
+                    { name: "Outro" }
+                ]
+            };
+        },
+        methods: {
+            async clickButton() {
+                if(this.occupationArea === null || this.monthlyBilling === null || this.nameCompany === null || this.fone === null || this.email === null || this.name === null ||
+                    this.occupationArea === '' || this.monthlyBilling === '' || this.nameCompany === '' || this.fone === '' || this.email === '' || this.name === ''){
+                    this.$refs.toast.add({ 
+                        severity: 'error', 
+                        summary: 'Campos Vazios', 
+                        detail: 'Nenhum campo deve ser vazio', 
+                        life: 3000 
+                    });
+                    return;
+                }
+
+                try {
+                    await addDoc(collection(db, "Clientes"), {
+                        occupationArea: this.occupationArea,
+                        monthlyBilling: this.monthlyBilling,
+                        nameCompany: this.nameCompany,
+                        fone: this.fone,
+                        email: this.email,
+                        name: this.name
+                    });
+                    this.dialogSuccess = true;
+                } catch (e) {
+                    this.dialogError = true;
+                }
+            }
+        },
+        components: {
+            InputText,
+            Button,
+            InputNumber,
+            Dropdown,
+            Toast,
+            Dialog
+        }
+    };
+</script>
 
 <style scoped>
 
@@ -120,16 +246,25 @@
 
 .input-style{
     width: 85%;
-    height: 40px;
+    height: 50px;
     margin-top: 30px;
     border-radius: 5px;
+}
+
+.input-style-dropdown{
+    width: 85%;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-align: left;
+    align-items: center;
 }
 
 .input-style-submit{
     background-color: #18B012;
     width: 85%;
-    height: 40px;
-    margin-top: 50px;
+    height: 50px;
+    margin-top: 30px;
     color: white;
 }
 
