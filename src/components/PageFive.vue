@@ -36,19 +36,23 @@
                 </div>
             </div>
 
-            <div class="button"> 
-                Agendar uma reunião
-            </div>
+            <Button class="input-style-submit" label="Agendar uma reunião" />
+
         </div>
     </div>
 </template>
 
 <script>
+import Button from 'primevue/button';
+
 export default {
   methods: {
     isScreenSmall() {
         return window.innerWidth < 801;
     }
+  },
+  components: {
+    Button
   }
 };
 </script>

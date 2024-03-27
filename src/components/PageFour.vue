@@ -31,14 +31,14 @@
 				<a class="next" @click="changeSlide(1)">❯</a>
 			</div>
 
-			<div class="button">
-				Quero um marketing feito sob medida
-			</div>
+            <Button class="input-style-submit" label="Quero um marketing feito sob medida" />
+
 		</div>
 	</div>
 </template>
   
 <script>
+import Button from 'primevue/button';
 export default {
 	data() {
 		return {
@@ -89,7 +89,10 @@ export default {
 	},
 	mounted() {
 		this.startInterval(); // Inicia o intervalo quando o componente é montado
-	}
+	},
+    components: {
+        Button
+    }
 };
 </script>
   

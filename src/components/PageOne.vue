@@ -16,9 +16,7 @@
                         <span style="color: red;">sob medida</span>
                         para atender seu negócio
                     </div>
-                    <div class="button"> 
-                        QUERO MAIS INFORMAÇÕES
-                    </div>
+                    <Button class="input-style-submit" label="Quero mais Informações" @click="clickButton" />
                 </div>
                 <img src="@/assets/bg-home.png" id="image" class="img-vitor" alt="Minha Imagem">
             </div>
@@ -27,6 +25,7 @@
 </template>
 
 <script>
+import Button from 'primevue/button';
 export default {
     data() {
         return {
@@ -41,6 +40,9 @@ export default {
         handleResize() {
             this.screenWidth = window.innerWidth;
         }
+    },
+    components: {
+        Button
     }
 };
 </script>

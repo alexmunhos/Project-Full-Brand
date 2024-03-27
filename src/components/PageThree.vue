@@ -56,12 +56,24 @@
                 </div>
             </div>
 
-            <div class="button-see"> 
-                Quero ver isso na prática
-            </div>
+            <Button class="input-style-submit" label="Quero ver isso na prática" />
+
         </div>
     </div>
 </template>
+
+<script>
+import Button from 'primevue/button';
+
+export default {
+    methods: {
+        
+    },
+    components: {
+        Button
+    }
+};
+</script>
 
 <style scoped>
 

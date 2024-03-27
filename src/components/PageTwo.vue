@@ -39,11 +39,12 @@
 
                     <div class="text-center-1">
                         <div class="title-text-first">
-                            Preencha o formulário
+                            Receba uma ligação
                         </div>
 
                         <div class="title-text-second">
-                            Envie suas informações de cntato. Todos os seus dados estarão seguros, vamos cuidar bem deles.
+                            Em até 12 horas, um dos nossos especialistas fará uma ligação para agendar 
+                            a reunião mais importante com você.
                         </div>
                     </div>
                 </div>
