@@ -37,19 +37,20 @@
 
 <script>
 import Button from 'primevue/button';
+import teste from '../assets/PADUA.png'
 
 export default {
 	data() {
 		return {
 			slides: [
-                { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc2916956322589035.svg"},
-                { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc291695632520290.svg"},
-                { image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-b/1707397692/imagens/mobile/350566_1_1698344999653ab027455cc2916956324479141.svg"},
+                { image: `${teste}`},
+                { image: `${teste}`},
+                { image: `${teste}`},
 			],
 			slidesResponsive: [
-				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431931225356.svg"},
-				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431934699311.svg"},
-				{ image: "https://cdn.greatpages.com.br/lp.v4company.com-assessoria-go-modular-seg/1708992213/imagens/mobile/496864_1_170897935265dcf498b05b13627431938639755.svg"},
+				{ image: `${teste}`},
+				{ image: `${teste}`},
+				{ image: `${teste}`},
 			],
 			currentSlideIndex: 0,
 			intervalId: null // Adicionando uma variável para armazenar o ID do intervalo
